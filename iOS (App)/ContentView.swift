@@ -69,7 +69,7 @@ struct ContentView: View {
                 Spacer()
                 VStack {
                     Group {
-                        Toggle("Twitter Redirects", isOn: redirectNitter)
+                        Toggle("Twitter / X Redirects", isOn: redirectNitter)
                         Toggle("Reddit Redirects", isOn: redirectReddit)
                         Toggle("YouTube Redirects", isOn: redirectInvidious)
                     }
