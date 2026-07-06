@@ -34,24 +34,18 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "simplyTranslate": !(defaults?.bool(forKey: "disableSimplyTranslate") ?? false),
                     "osm": !(defaults?.bool(forKey: "disableOsm") ?? false),
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
-                    "scribe": !(defaults?.bool(forKey: "disableScribe") ?? false),
-                    "proxiTok": !(defaults?.bool(forKey: "disableProxiTok") ?? false),
                     "rimgo": !(defaults?.bool(forKey: "disableRimgo") ?? false),
-                    "quetre": !(defaults?.bool(forKey: "disableQuetre") ?? false),
                     "libremdb": !(defaults?.bool(forKey: "disableLibremDB") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
-            let nitter = defaults?.string(forKey: "nitterInstance") ?? "nitter.net"
-            let reddit = defaults?.string(forKey: "redditInstance") ?? "teddit.net"
-            let invidious = defaults?.string(forKey: "invidiousInstance") ?? "invidious.kavin.rocks"
+            let nitter = defaults?.string(forKey: "nitterInstance") ?? "xcancel.com"
+            let reddit = defaults?.string(forKey: "redditInstance") ?? "redlib.catsarch.com"
+            let invidious = defaults?.string(forKey: "invidiousInstance") ?? "yewtu.be"
             let simplyTranslate = defaults?.string(forKey: "simplyTranslateInstance") ?? "simplytranslate.org"
             let osm = defaults?.string(forKey: "osmInstance") ?? "openstreetmap.org"
             let searchEngine = defaults?.string(forKey: "searchEngineInstance") ?? "duckduckgo.com/"
-            let scribe = defaults?.string(forKey: "scribeInstance") ?? "scribe.rip"
-            let proxiTok = defaults?.string(forKey: "proxiTokInstance") ?? "proxitok.herokuapp.com"
-            let rimgo = defaults?.string(forKey: "rimgoInstance") ?? "i.bcow.xyz"
-            let quetre = defaults?.string(forKey: "quetreInstance") ?? "quetre.iket.me"
+            let rimgo = defaults?.string(forKey: "rimgoInstance") ?? "rimgo.pussthecat.org"
             let libremdb = defaults?.string(forKey: "libremDBInstance") ?? "libremdb.iket.me"
             response.userInfo = [
                 SFExtensionMessageKey: [
@@ -61,10 +55,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "simplyTranslate": simplyTranslate,
                     "osm": osm,
                     "searchEngine": searchEngine,
-                    "scribe": scribe,
-                    "proxiTok": proxiTok,
                     "rimgo": rimgo,
-                    "quetre": quetre,
                     "libremdb": libremdb,
                 ]
             ]

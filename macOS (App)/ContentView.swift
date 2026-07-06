@@ -18,10 +18,7 @@ struct ContentView: View {
     @AppStorage("disableSimplyTranslate") var disableSimplyTranslate = false
     @AppStorage("disableOsm") var disableOsm = false
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
-    @AppStorage("disableScribe") var disableScribe = false
-    @AppStorage("disableProxiTok") var disableProxiTok = false
     @AppStorage("disableRimgo") var disableRimgo = false
-    @AppStorage("disableQuetre") var disableQuetre = false
     @AppStorage("disableLibremDB") var disableLibremDB = false
 
     var body: some View {
@@ -49,21 +46,9 @@ struct ContentView: View {
             get: { !self.disableSearchEngine },
             set: { value in self.disableSearchEngine = !value }
         )
-        let redirectScribe = Binding<Bool>(
-            get: { !self.disableScribe },
-            set: { value in self.disableScribe = !value }
-        )
-        let redirectProxiTok = Binding<Bool>(
-            get: { !self.disableProxiTok },
-            set: { value in self.disableProxiTok = !value }
-        )
         let redirectRimgo = Binding<Bool>(
             get: { !self.disableRimgo },
             set: { value in self.disableRimgo = !value }
-        )
-        let redirectQuetre = Binding<Bool>(
-            get: { !self.disableQuetre },
-            set: { value in self.disableQuetre = !value }
         )
         let redirectLibremDB = Binding<Bool>(
             get: { !self.disableLibremDB },
@@ -100,10 +85,7 @@ struct ContentView: View {
                     Toggle("Search Redirects", isOn: redirectSearchEngine)
                 }
                 Group {
-                    Toggle("Medium Redirects", isOn: redirectScribe)
-                    Toggle("TikTok Redirects", isOn: redirectProxiTok)
                     Toggle("Imgur Redirects", isOn: redirectRimgo)
-                    Toggle("Quora Redirects", isOn: redirectQuetre)
                     Toggle("IMDB Redirects", isOn: redirectLibremDB)
                 }
             }

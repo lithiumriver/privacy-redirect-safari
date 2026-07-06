@@ -10,23 +10,25 @@ import Foundation
 
 struct Instances {
     public let nitter = [
+        "xcancel.com",
         "nitter.net",
-        "nitter.pussthecat.org",
-        "nitter.lacontrevoie.fr",
+        "nitter.poast.org",
+        "lightbrd.com",
     ]
     public let reddit = [
-        "libredd.it",
-        "teddit.net",
-        "old.reddit.com",
+        "redlib.catsarch.com",
+        "safereddit.com",
+        "redlib.perennialte.ch",
     ]
     public let invidious = [
-        "invidious.kavin.rocks",
-        "piped.kavin.rocks",
+        "yewtu.be",
+        "inv.nadeko.net",
+        "invidious.nerdvpn.de",
     ]
     public let simplyTranslate = [
         "simplytranslate.org",
-        "translate.bus-hit.me",
-        "simplytranslate.pussthecat.org",
+        "translate.projectsegfau.lt",
+        "translate.plausibility.cloud",
     ]
     public let maps = [
          "openstreetmap.org",
@@ -34,35 +36,20 @@ struct Instances {
     public let searchEngines = [
         SearchEngineInstance("duckduckgo.com"),
         SearchEngineInstance("startpage.com", path: "/sp/search"),
+        SearchEngineInstance("priv.au", path: "/search"),
         SearchEngineInstance("www.ecosia.org", path: "/search"),
-        SearchEngineInstance("www.qwant.com"),
-        SearchEngineInstance("searx.work"),
-        SearchEngineInstance("search.unlocked.link"),
-    ]
-    public let scribe = [
-        "scribe.rip",
-        "scribe.nixnet.services",
-        "scribe.citizen4.eu",
-    ]
-    public let proxiTok = [
-        "proxitok.pabloferreiro.es",
-        "proxitok.pussthecat.org",
+        SearchEngineInstance("searx.be", path: "/search"),
     ]
     public let rimgo = [
-        "i.bcow.xyz",
-        "rimgo.totaldarkness.net",
         "rimgo.pussthecat.org",
-        "imgur.artemislena.eu",
-    ]
-    public let quetre = [
-        "quetre.iket.me",
-        "qr.vern.cc",
-        "quetre.pussthecat.org",
+        "rimgo.catsarch.com",
+        "rimgo.projectsegfau.lt",
+        "rimgo.privacyredirect.com",
     ]
     public let libremdb = [
         "libremdb.iket.me",
-        "ld.vern.cc",
         "libremdb.pussthecat.org",
+        "ld.vern.cc",
     ]
 }
 

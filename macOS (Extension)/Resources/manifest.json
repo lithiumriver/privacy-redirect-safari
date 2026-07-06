@@ -1,8 +1,8 @@
 {
   "name": "Privacy Redirect",
   "description": "A configurable web extension that redirects Twitter, YouTube, Reddit, and more to privacy friendly alternatives.",
-  "version": "1.10.3",
-  "manifest_version": 2,
+  "version": "2.0.0",
+  "manifest_version": 3,
   "icons": {
     "16": "assets/images/icon16.png",
     "32": "assets/images/icon32.png",
@@ -10,15 +10,16 @@
     "128": "assets/images/icon128.png"
   },
   "permissions": [
-      "storage",
-      "nativeMessaging",
-      "<all_urls>"
+    "storage",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "background": {
-      "scripts": ["pages/background.js"],
-      "persistent": false
+    "service_worker": "pages/background.js"
   },
-  "browser_action": {
+  "action": {
     "default_title": "Privacy Redirect",
     "default_popup": "pages/popup/popup.html",
     "default_icon": {
@@ -39,7 +40,9 @@
         "*://pbs.twimg.com/*",
         "*://video.twimg.com/*"
       ],
-      "js": ["assets/scripts/twitter.js"],
+      "js": [
+        "assets/scripts/twitter.js"
+      ],
       "run_at": "document_start"
     },
     {
@@ -52,7 +55,9 @@
         "*://i.reddit.com/*",
         "*://i.redd.it/*"
       ],
-      "js": ["assets/scripts/reddit.js"],
+      "js": [
+        "assets/scripts/reddit.js"
+      ],
       "run_at": "document_start"
     },
     {
@@ -67,7 +72,9 @@
         "*://s.ytimg.com/*",
         "*://music.youtube.com/*"
       ],
-      "js": ["assets/scripts/youtube.js"],
+      "js": [
+        "assets/scripts/youtube.js"
+      ],
       "run_at": "document_start"
     },
     {
@@ -263,7 +270,9 @@
         "*://translate.google.co.zw/*",
         "*://translate.google.cat/*"
       ],
-      "js": ["assets/scripts/google-translate.js"],
+      "js": [
+        "assets/scripts/google-translate.js"
+      ],
       "run_at": "document_start"
     },
     {
@@ -840,7 +849,9 @@
         "*://search.google.cat/*",
         "*://duckduckgo.com/*"
       ],
-      "js": ["assets/scripts/search.js"],
+      "js": [
+        "assets/scripts/search.js"
+      ],
       "run_at": "document_start"
     },
     {
@@ -1416,22 +1427,9 @@
         "*://google.cat/maps*",
         "*://www.google.cat/maps*"
       ],
-      "js": ["assets/scripts/google-maps.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://medium.com/*"
+      "js": [
+        "assets/scripts/google-maps.js"
       ],
-      "js": ["assets/scripts/medium.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://tiktok.com/*",
-        "*://www.tiktok.com/*"
-      ],
-      "js": ["assets/scripts/tiktok.js"],
       "run_at": "document_start"
     },
     {
@@ -1440,15 +1438,9 @@
         "*://m.imgur.com/*",
         "*://imgur.com/*"
       ],
-      "js": ["assets/scripts/imgur.js"],
-      "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "*://www.quora.com/*",
-        "*://quora.com/*"
+      "js": [
+        "assets/scripts/imgur.js"
       ],
-      "js": ["assets/scripts/quora.js"],
       "run_at": "document_start"
     },
     {
@@ -1457,7 +1449,9 @@
         "*://m.imdb.com/*",
         "*://imdb.com/*"
       ],
-      "js": ["assets/scripts/imdb.js"],
+      "js": [
+        "assets/scripts/imdb.js"
+      ],
       "run_at": "document_start"
     }
   ]

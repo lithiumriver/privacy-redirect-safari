@@ -4,18 +4,7 @@ const bypassPaths = /\/(gallery|poll|rpan|settings|topics|media)/;
 
 function redirectReddit(instance, url) {
   if (url.host === "i.redd.it") {
-    if (instance.includes("libredd")) {
-      return `${instance}/img${url.pathname}${url.search}`;
-    } else if (instance.includes("teddit")) {
-      // As of 2021-04-09, redirects for teddit images are nontrivial:
-      // - navigating to the image before ever navigating to its page causes
-      //   404 error (probably needs fix on teddit project)
-      // - some image links on teddit are very different
-      // Therefore, don't support redirecting image links for teddit.
-      return null;
-    } else {
-      return null;
-    }
+    return `${instance}/img${url.pathname}${url.search}`;
   }
   return `${instance}${url.pathname}${url.search}`;
 }

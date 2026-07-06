@@ -14,22 +14,16 @@ struct InstancesView: View {
     @AppStorage("useCustomSimplyTranslateInstance") var useCustomSimplyTranslateInstance = false
     @AppStorage("useCustomOsmInstance") var useCustomOsmInstance = false
     @AppStorage("useCustomSearchEngineInstance") var useCustomSearchEngineInstance = false
-    @AppStorage("useCustomScribeInstance") var useCustomScribeInstance = false
-    @AppStorage("useCustomProxiTokInstance") var useCustomProxiTokInstance = false
     @AppStorage("useCustomRimgoInstance") var useCustomRimgoInstance = false
-    @AppStorage("useCustomQuetreInstance") var useCustomQuetreInstance = false
     @AppStorage("useCustomLibremDBInstance") var useCustomLibremDBInstance = false
 
-    @AppStorage("nitterInstance") var nitterInstance = "nitter.net"
-    @AppStorage("redditInstance") var redditInstance = "teddit.net"
-    @AppStorage("invidiousInstance") var invidiousInstance = "invidious.kavin.rocks"
+    @AppStorage("nitterInstance") var nitterInstance = "xcancel.com"
+    @AppStorage("redditInstance") var redditInstance = "redlib.catsarch.com"
+    @AppStorage("invidiousInstance") var invidiousInstance = "yewtu.be"
     @AppStorage("simplyTranslateInstance") var simplyTranslateInstance = "simplytranslate.org"
     @AppStorage("osmInstance") var osmInstance = "openstreetmap.org"
     @AppStorage("searchEngineInstance") var searchEngineInstance = "duckduckgo.com/"
-    @AppStorage("scribeInstance") var scribeInstance = "scribe.rip"
-    @AppStorage("proxiTokInstance") var proxiTokInstance = "proxitok.herokuapp.com"
-    @AppStorage("rimgoInstance") var rimgoInstance = "i.bcow.xyz"
-    @AppStorage("quetreInstance") var quetreInstance = "quetre.iket.me"
+    @AppStorage("rimgoInstance") var rimgoInstance = "rimgo.pussthecat.org"
     @AppStorage("libremDBInstance") var libremDBInstance = "libremdb.iket.me"
 
     let instances = Instances()
@@ -38,7 +32,7 @@ struct InstancesView: View {
         InstanceViewContainer {
             Group {
                 InstanceSection(
-                    name: "Twitter",
+                    name: "Twitter / X",
                     customInstance: $useCustomNitterInstance,
                     instance: $nitterInstance,
                     instances: instances.nitter)
@@ -105,25 +99,10 @@ struct InstancesView: View {
             }
             Group {
                 InstanceSection(
-                    name: "Medium",
-                    customInstance: $useCustomScribeInstance,
-                    instance: $scribeInstance,
-                    instances: instances.scribe)
-                InstanceSection(
-                    name: "TikTok",
-                    customInstance: $useCustomProxiTokInstance,
-                    instance: $proxiTokInstance,
-                    instances: instances.proxiTok)
-                InstanceSection(
                     name: "Imgur",
                     customInstance: $useCustomRimgoInstance,
                     instance: $rimgoInstance,
                     instances: instances.rimgo)
-                InstanceSection(
-                    name: "Quetre",
-                    customInstance: $useCustomQuetreInstance,
-                    instance: $quetreInstance,
-                    instances: instances.quetre)
                 InstanceSection(
                     name: "LibremDB",
                     customInstance: $useCustomLibremDBInstance,
