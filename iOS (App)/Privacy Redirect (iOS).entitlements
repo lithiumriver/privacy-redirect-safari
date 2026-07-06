@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.Privacy-Redirect-for-Safari</string>
+		<string>group.com.lithiumriver.Privacy-Redirect-for-Safari</string>
 	</array>
 </dict>
 </plist>

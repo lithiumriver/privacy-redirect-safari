@@ -15,7 +15,7 @@ enum ExtensionEnabledState {
 
 class AppState: ObservableObject {
     @Published var extensionEnabledState: ExtensionEnabledState
-    public let identifier = "com.smmr-software.Privacy-Redirect-for-Safari.Extension"
+    public let identifier = "com.lithiumriver.Privacy-Redirect-for-Safari.Extension"
 
     init(initialExtensionEnabledState: ExtensionEnabledState) {
         self.extensionEnabledState = initialExtensionEnabledState
