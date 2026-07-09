@@ -36,6 +36,9 @@
         "*://twitter.com/*",
         "*://www.twitter.com/*",
         "*://mobile.twitter.com/*",
+        "*://x.com/*",
+        "*://www.x.com/*",
+        "*://mobile.x.com/*",
         "*://pbs.twimg.com/*",
         "*://video.twimg.com/*"
       ],
