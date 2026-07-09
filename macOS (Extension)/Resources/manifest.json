@@ -1456,6 +1456,60 @@
         "assets/scripts/imdb.js"
       ],
       "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://www.amazon.com/*",
+        "*://amazon.com/*",
+        "*://www.amazon.co.uk/*",
+        "*://amazon.co.uk/*",
+        "*://www.amazon.de/*",
+        "*://amazon.de/*",
+        "*://www.amazon.co.jp/*",
+        "*://amazon.co.jp/*",
+        "*://www.amazon.fr/*",
+        "*://amazon.fr/*",
+        "*://www.amazon.ca/*",
+        "*://amazon.ca/*",
+        "*://www.amazon.com.au/*",
+        "*://amazon.com.au/*",
+        "*://www.amazon.in/*",
+        "*://amazon.in/*",
+        "*://www.amazon.it/*",
+        "*://amazon.it/*",
+        "*://www.amazon.es/*",
+        "*://amazon.es/*",
+        "*://www.amazon.com.br/*",
+        "*://amazon.com.br/*",
+        "*://www.amazon.com.mx/*",
+        "*://amazon.com.mx/*",
+        "*://www.amazon.nl/*",
+        "*://amazon.nl/*",
+        "*://www.amazon.se/*",
+        "*://amazon.se/*",
+        "*://www.amazon.pl/*",
+        "*://amazon.pl/*",
+        "*://www.amazon.com.tr/*",
+        "*://amazon.com.tr/*",
+        "*://www.amazon.ae/*",
+        "*://amazon.ae/*",
+        "*://www.amazon.sa/*",
+        "*://amazon.sa/*",
+        "*://www.amazon.sg/*",
+        "*://amazon.sg/*",
+        "*://www.amazon.eg/*",
+        "*://amazon.eg/*",
+        "*://www.amazon.cn/*",
+        "*://amazon.cn/*",
+        "*://www.amazon.com.be/*",
+        "*://amazon.com.be/*",
+        "*://www.amazon.ie/*",
+        "*://amazon.ie/*"
+      ],
+      "js": [
+        "assets/scripts/amazon.js"
+      ],
+      "run_at": "document_start"
     }
   ]
 }

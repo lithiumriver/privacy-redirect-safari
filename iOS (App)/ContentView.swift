@@ -16,6 +16,7 @@ struct ContentView: View {
     @AppStorage("disableSearchEngine") var disableSearchEngine = false
     @AppStorage("disableRimgo") var disableRimgo = false
     @AppStorage("disableLibremDB") var disableLibremDB = false
+    @AppStorage("disableAmazon") var disableAmazon = false
     @State private var viewingSettings = false
 
     var body: some View {
@@ -51,6 +52,10 @@ struct ContentView: View {
             get: { !self.disableLibremDB },
             set: { value in self.disableLibremDB = !value }
         )
+        let redirectAmazon = Binding<Bool>(
+            get: { !self.disableAmazon },
+            set: { value in self.disableAmazon = !value }
+        )
 
         return ScrollView {
             VStack {
@@ -81,6 +86,7 @@ struct ContentView: View {
                     Group {
                         Toggle("Imgur Redirects", isOn: redirectRimgo)
                         Toggle("IMDB Redirects", isOn: redirectLibremDB)
+                        Toggle("Amazon Redirects", isOn: redirectAmazon)
                     }
                 }
                     .frame(maxWidth: 500)

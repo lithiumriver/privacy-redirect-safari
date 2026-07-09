@@ -32,6 +32,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
                     "searchEngine": !(defaults?.bool(forKey: "disableSearchEngine") ?? false),
                     "rimgo": !(defaults?.bool(forKey: "disableRimgo") ?? false),
                     "libremdb": !(defaults?.bool(forKey: "disableLibremDB") ?? false),
+                    "amazon": !(defaults?.bool(forKey: "disableAmazon") ?? false),
                 ]
             ]
         } else if messageDict?["message"] == "instanceSettings" {
